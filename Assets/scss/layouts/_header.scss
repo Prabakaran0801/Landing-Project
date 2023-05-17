@@ -1,0 +1,37 @@
+ @use"../abstact/variable" as var; 
+
+ @use "../abstact/functions" as func;
+ /* Heder Style */
+ .header {
+    padding: 0.5rem 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    &--menu {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      text-transform: uppercase;
+      
+  
+      &__item >a{
+        margin-right: 2rem;
+        font-size: 18px;
+        font-weight: 600;
+        color: #000;
+        
+        &:hover{
+  
+            color: func.them-colors() ;
+          }
+
+          &.active{
+            color: func.them-colors() ;
+          }
+
+    }
+
+    }
+  }
+  

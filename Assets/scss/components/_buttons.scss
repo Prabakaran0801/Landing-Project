@@ -1,0 +1,23 @@
+@use "../abstact/variable" as var;
+@use"../abstact/functions" as func;
+
+.btn {
+  padding: 0.5rem 1rem;
+
+  border-radius: 6px;
+  font-size: 0.98rem;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  display: inline-block;
+ 
+
+  &-primary{
+    background-color: func.them-colors();
+    color: #fff;
+  }
+
+  &:hover{
+    background-color: func.them-colors("primary-hover");
+  }
+}
