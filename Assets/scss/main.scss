@@ -1,26 +1,22 @@
 // Abstract
 @import "./abstact/variable";
 
-
 // Base
 @import "./base/reset";
-@import"./base/global";
-
+@import "./base/global";
 
 // Components
-@import"./components/buttons";
+@import "./components/buttons";
 @import "./components/badges";
 
-
 // layouts
-@import"./layouts/header";
-@import"./layouts/background_elements";
+@import "./layouts/header";
+@import "./layouts/background_elements";
 
 // utilites
 @import "./utilities/animation";
-@import"./utilities/spacing";
+@import "./utilities/spacing";
 
 // Pages
-@import"./pages/home";
-
-
+@import "./pages/home";
+@import"./pages/about";
