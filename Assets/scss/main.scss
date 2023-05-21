@@ -7,12 +7,20 @@
 @import"./base/global";
 
 
-// utilites
-@import "./utilities/animation";
+// Components
+@import"./components/buttons";
+@import "./components/badges";
+
 
 // layouts
 @import"./layouts/header";
+@import"./layouts/background_elements";
 
-// Components
-@import"./components/buttons";
- 
+// utilites
+@import "./utilities/animation";
+@import"./utilities/spacing";
+
+// Pages
+@import"./pages/home";
+
+

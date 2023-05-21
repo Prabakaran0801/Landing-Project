@@ -1,0 +1,12 @@
+@use "../abstact/functions" as func;
+
+.badge {
+  padding: 2px 10px;
+  border-radius: 10px;
+
+  &-primary {
+    @extend.badge;
+    background-color: func.them-colors();
+    color: #fff;
+  }
+}
