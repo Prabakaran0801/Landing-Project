@@ -15,20 +15,20 @@
   &--content {
     color: #fff;
 
-    h2{
-        font-size: 3rem;
+    h2 {
+      font-size: 3rem;
     }
-    p{
-        line-height: 1.7rem;
-        color: #cfcfcf;
+    p {
+      line-height: 1.7rem;
+      color: #cfcfcf;
     }
-    a{
-        color: #fff;
-        
-        &:hover{
-            text-shadow: 10px 10px 10px ;
-            color: #000000;
-        }
+    a {
+      color: #fff;
+
+      &:hover {
+        text-shadow: 10px 10px 10px;
+        color: #000000;
+      }
     }
   }
 }
