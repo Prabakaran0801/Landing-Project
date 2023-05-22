@@ -1,4 +1,15 @@
+
+@use"../abstact/variable" as var;
+
 .color-anim {
-  transition: 500ms;
-  animation: color-change 10s infinite;
+  transition: 550ms;
+  animation: color-change 5s infinite;
 }
+
+.line{
+  background:linear-gradient(to right, #e24997, #2d2ed4);
+  width: 8rem;
+  height: 0.4rem;
+  border-radius: 5px;
+  margin: 25px auto ;
+ }
