@@ -1028,4 +1028,59 @@ a {
 }
 .roadmap--item:hover {
   filter: grayscale(0%);
+}
+
+.card {
+  padding: 3rem 8rem;
+  background-color: #3f43fd;
+}
+.card--heading {
+  text-align: center;
+}
+.card--heading h2 {
+  font-size: 2rem;
+  color: #fff;
+}
+.card--heading p {
+  color: #d6d4d4;
+}
+.card--items {
+  display: flex;
+  justify-content: space-between;
+}
+.card--item {
+  background-color: #fff;
+  max-width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.card--item--img {
+  width: 200px;
+}
+.card--item--content {
+  padding: 2rem;
+}
+.card--item--content h4 {
+  font-size: 1.5rem;
+}
+.card--item--content p {
+  color: gray;
+  line-height: 1.5rem;
+}
+.card--item a {
+  color: #000;
+}
+.card--item:hover {
+  box-shadow: 2px 2px 20px 5px rgb(32, 32, 32);
+}
+.card--info {
+  text-align: center;
+  margin-top: 4rem;
+  color: rgb(202, 196, 196);
+}
+.card--info a {
+  color: white;
+}
+.card--info a:hover {
+  text-shadow: 5px 5px 10px black;
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,67 @@
+@use "../abstact/functions" as func;
+
+.card {
+  padding: 3rem 8rem;
+  background-color: func.them-colors();
+
+  &--heading {
+    text-align: center;
+
+    h2 {
+      font-size: 2rem;
+      color: #fff;
+    }
+
+    p {
+      color: #d6d4d4;
+    }
+  }
+
+  &--items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &--item {
+    background-color: #fff;
+    max-width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+
+    &--img {
+      width: 200px;
+    }
+    &--content {
+      padding: 2rem;
+
+      h4 {
+        font-size: 1.5rem;
+      }
+      p {
+        color: gray;
+        line-height: 1.5rem;
+      }
+    }
+    a {
+      color: #000;
+    }
+
+    &:hover {
+      box-shadow: 2px 2px 20px 5px rgb(32, 32, 32);
+    }
+  }
+
+  &--info {
+    text-align: center;
+    margin-top: 4rem;
+    color: rgb(202, 196, 196);
+
+    a {
+      color: white;
+
+      &:hover {
+        text-shadow: 5px 5px 10px black;
+      }
+    }
+  }
+}
