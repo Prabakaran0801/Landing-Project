@@ -1,0 +1,25 @@
+@use"../abstact/functions" as func;
+
+.form-control{
+    padding: 0.8rem 1.5rem;
+    width: 100%;
+    background-color:rgb(207, 205, 205) ;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+
+    &:focus{
+        border: 2px solid func.them-colors();
+    }
+}
+    .resize-x{
+        resize: horizontal;
+    }
+
+    .resize-x{
+        resize: vertical;
+    }
+    .resize-none{
+        resize: none;
+    }
+

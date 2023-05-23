@@ -60,6 +60,30 @@ a {
   color: #fff;
 }
 
+.form-control {
+  padding: 0.8rem 1.5rem;
+  width: 100%;
+  background-color: rgb(207, 205, 205);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.form-control:focus {
+  border: 2px solid #3f43fd;
+}
+
+.resize-x {
+  resize: horizontal;
+}
+
+.resize-x {
+  resize: vertical;
+}
+
+.resize-none {
+  resize: none;
+}
+
 /* Heder Style */
 .header {
   padding: 0.5rem 10rem;
@@ -902,9 +926,12 @@ a {
   line-height: 1.5;
   color: gray;
 }
+.hero-area--img {
+  border-radius: 15px;
+}
 
 .about-area {
-  padding: 8rem 8rem;
+  padding: 10rem 8rem;
   background-color: #3f43fd;
   display: flex;
   justify-content: center;
@@ -933,7 +960,7 @@ a {
 }
 
 .roadmap {
-  padding: 3rem 10rem;
+  padding: 8rem 10rem;
 }
 .roadmap--heading {
   text-align: center;
@@ -1031,7 +1058,7 @@ a {
 }
 
 .card {
-  padding: 3rem 8rem;
+  padding: 2rem 8rem;
   background-color: #3f43fd;
 }
 .card--heading {
@@ -1046,7 +1073,7 @@ a {
 }
 .card--items {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .card--item {
   background-color: #fff;
@@ -1075,7 +1102,7 @@ a {
 }
 .card--info {
   text-align: center;
-  margin-top: 4rem;
+  margin-top: 2rem;
   color: rgb(202, 196, 196);
 }
 .card--info a {
@@ -1083,4 +1110,31 @@ a {
 }
 .card--info a:hover {
   text-shadow: 5px 5px 10px black;
+}
+
+.contact {
+  padding: 4rem 10rem;
+  background-color: rgb(194, 192, 192);
+}
+.contact--card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+}
+.contact--card--contents {
+  flex-grow: 1;
+}
+.contact--card--contents h4 {
+  font-size: 1.2rem;
+}
+.contact--card--contents p {
+  color: gray;
+}
+.contact--card--img {
+  margin-top: 3rem;
+  padding-left: 30px;
+  width: 500px;
 }/*# sourceMappingURL=main.css.map */

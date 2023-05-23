@@ -29,19 +29,19 @@
           </li>
 
           <li class="header--menu__item">
-            <a href="">About</a>
+            <a href="#about">About</a>
           </li>
 
           <li class="header--menu__item">
-            <a href="">skill</a>
+            <a href="#skills">skill</a>
           </li>
 
           <li class="header--menu__item">
-            <a href="">projects</a>
+            <a href="#project">projects</a>
           </li>
 
           <li>
-            <a href="" class="btn-primary">Contact</a>
+            <a href="#contact" class="btn-primary">Contact</a>
           </li>
         </ul>
       </div>
@@ -92,13 +92,13 @@
         </div>
 
         <div>
-          <img src="./Assets/img/hero--img.avif" alt="img" />
+          <img class="hero-area--img" src="./Assets/img/hero--img.avif" alt="img" />
         </div>
       </section>
       <!-- ========== End Hero-area ========== -->
 
       <!-- ========== Start About ========== -->
-      <section class="about-area space-x-3">
+      <section id="about" class="about-area space-x-3">
         <div>
           <img
             class="about-area--img"
@@ -125,7 +125,7 @@
       <!-- ========== End About ========== -->
 
       <!-- ========== Start Roadmap ========== -->
-      <section class="roadmap">
+      <section id="skills" class="roadmap">
         <div class="roadmap--heading">
           <h2>My Skills</h2>
           <p>Those Are my Skills</p>
@@ -167,8 +167,8 @@
       <!-- ========== End Roadmap ========== -->
 
       <!-- ========== Start Card ========== -->
-      <section class="card">
-        <div class="card--heading mb-5">
+      <section id="project" class="card">
+        <div class="card--heading mb-2">
           <h2>Projects</h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt,
@@ -236,6 +236,46 @@
         </div>
       </section>
       <!-- ========== End Card ========== -->
+
+
+      <!-- ========== Start contact ========== -->
+      <section id="contact" class="contact">
+        <div class="contact--card ">
+
+          <form class="contact--card--contents space-y-1 " action="#" method="POST">
+      
+            <div class="contact--header mb-2">
+              <h4>Send us a Message</h4>
+              <p>Share your info briefly as possible</p>
+            </div>
+           
+            <div>
+              <input type="text" name="name" placeholder="Your name" class="form-control" required>
+             </div>
+           
+             <div>
+              <input type="email" name="email" placeholder="Your Email"class="form-control" required>
+             </div>
+           
+             <div>
+              <input type="text" name="subject" placeholder="Subject" class="form-control" required>
+             </div>
+           
+             <div>
+              <textarea class="resize-none form-control"placeholder="Share your message in details" cols="30" rows="5"required></textarea>
+           </div>
+           <div>
+            <button class="btn-primary">send</button>
+           </div>
+      </form>
+
+
+          <div>
+            <img class="contact--card--img" src="./Assets/img/contact--img.avif" alt="contact img">
+          </div>
+        </div>
+      </section>
+      <!-- ========== End contact ========== -->
     </main>
     <!-- ========== End Main ========== -->
 

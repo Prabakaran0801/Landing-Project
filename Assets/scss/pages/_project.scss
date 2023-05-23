@@ -1,7 +1,7 @@
 @use "../abstact/functions" as func;
 
 .card {
-  padding: 3rem 8rem;
+  padding: 2rem 8rem;
   background-color: func.them-colors();
 
   &--heading {
@@ -19,7 +19,7 @@
 
   &--items {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   &--item {
@@ -53,7 +53,7 @@
 
   &--info {
     text-align: center;
-    margin-top: 4rem;
+    margin-top: 2rem;
     color: rgb(202, 196, 196);
 
     a {
