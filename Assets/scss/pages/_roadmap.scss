@@ -1,24 +1,39 @@
 @use "../abstact/variable" as var;
 @use "../abstact/functions" as func;
-
+@use "../abstact/mixins" as mixin;
 .roadmap {
   padding: 8rem 10rem;
 
+  @include mixin.responsive(xs) {
+    padding: 4rem 2rem;
+  }
+  @include mixin.responsive(sm) {
+    padding: 4rem 2rem;
+  }
+
   &--heading {
     text-align: center;
-    h5{
+    h5 {
       font-size: 2rem;
     }
-    p{
+    p {
       color: gray;
     }
-    
   }
   &--items {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
+
+    @include mixin.responsive(xs) {
+      flex-direction: column;
+      margin-left: -3.2rem;
+    }
+    @include mixin.responsive(sm) {
+      flex-direction: column;
+      margin-left: -3.2rem;
+    }
   }
 
   &--item {
@@ -84,11 +99,23 @@
       font-size: 3rem;
       color: rgb(24, 23, 23);
       z-index: 1;
+
+      @include mixin.responsive(xs) {
+        content: "\f107";
+        top: 90%;
+        left: 35%;
+      }
+
+      @include mixin.responsive(sm) {
+        content: "\f107";
+        top: 90%;
+        left: 40%;
+      }
     }
 
-    &:hover:not(:last-child)::before{
+    &:hover:not(:last-child)::before {
       color: func.them-colors();
-        right: -25%;
+      right: -25%;
     }
 
     &:hover:last-child::after {
@@ -101,11 +128,20 @@
       font-family: "Font Awesome 5 Free";
       font-weight: 600;
       font-size: 1.7rem;
-      z-index: 1; 
+      z-index: 1;
+
+      @include mixin.responsive(xs) {
+        top: 90%;
+        left: 30%;
+      }
+      @include mixin.responsive(sm) {
+        top: 90%;
+        left: 30%;
+      }
     }
 
-    &:hover h5{
-      color:func.them-colors();
+    &:hover h5 {
+      color: func.them-colors();
     }
 
     &:hover {

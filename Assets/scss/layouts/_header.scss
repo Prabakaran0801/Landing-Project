@@ -1,21 +1,59 @@
  @use"../abstact/variable" as var; 
-
  @use "../abstact/functions" as func;
+ @use"../abstact/mixins" as mixin;
  /* Heder Style */
  .header {
     padding: 0.5rem 10rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
+    border-bottom: 1px solid #eee;
+
+      @include mixin.responsive(xs){
+      
+        padding: 1rem 2rem;
+    }
+    @include mixin.responsive(sm){
+      
+      padding: 1rem 2rem;
+  }
+  @include mixin.responsive(md){
+      
+    padding: 2rem 4rem;
+}
+  .nav-toggler{
+    display: none;
+
+    @include mixin.responsive(xs){
+      display: block;
+      font-size:1.4rem;
+  }
+  @include mixin.responsive(sm){
+    display: block;
+    font-size:1.4rem;
+}
+@include mixin.responsive(md){
+
+  font-size:1.4rem;
+}
+
+}
     &--menu {
       display: flex;
       align-items: center;
       list-style: none;
       text-transform: uppercase;
-      
+
+      @include mixin.responsive(xs){
+      display: none;
+    }
+
+    @include mixin.responsive(sm){
+      display: none;
+    }
   
       &__item >a{
+        transition: 200ms;
         margin-right: 2rem;
         font-size: 18px;
         font-weight: 600;

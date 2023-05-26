@@ -1,8 +1,20 @@
+@use"../abstact/mixins" as mixin;
+
 .contact{
     padding: 4rem 10rem;
     background-color: rgb(194, 192, 192);
 
+    
+  @include mixin.responsive(xs){
+    padding: 4rem 2rem;
+  
+  }
 
+     
+  @include mixin.responsive(sm){
+    padding: 4rem 2rem;
+  
+  }
     &--card{
         display: flex;
         justify-content: space-between;
@@ -12,17 +24,43 @@
         padding: 1rem 3rem;
         border-radius: 0.5rem;
     
-    
+        
+        @include mixin.responsive(xs){
+            flex-direction: column;
+            align-items: initial;
+            padding: 2rem;
+            
+          }
+
+              
+        @include mixin.responsive(sm){
+          flex-direction: column;
+          align-items: initial;
+          padding: 2rem;
+        }
+
         &--contents{
            flex-grow: 1; 
         
 
         h4{
             font-size: 1.2rem;
+            @include mixin.responsive(xs){
+                font-size: 1rem;
+              }
+              @include mixin.responsive(sm){
+                font-size: 1.2rem;
+              }
         }
 
         p{
             color: gray;
+            @include mixin.responsive(xs){
+                font-size: 0.9rem;
+              }
+              @include mixin.responsive(sm){
+                font-size: 1rem;
+              }
         }
         }
 
@@ -30,6 +68,14 @@
             margin-top: 3rem;
             padding-left:30px;
             width: 500px;
+
+            @include mixin.responsive(xs){
+              max-width: 100%; 
+              }
+              @include mixin.responsive(sm){
+                max-width: 100%; 
+                
+                }
         }
     }
 }

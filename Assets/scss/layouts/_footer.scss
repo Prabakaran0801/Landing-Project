@@ -1,4 +1,5 @@
 @use "../abstact/functions" as func;
+@use"../abstact/mixins" as mixin;
 
 footer {
   padding: 2rem 0;
@@ -6,8 +7,25 @@ footer {
   text-align: center;
   color: #fff;
 
+
+ h2{
+  @include mixin.responsive(xs){
+    font-size: 1.2rem;
+  }
+  @include mixin.responsive(sm){
+    font-size: 1.2rem;
+  }
+  
+ }
+
   p {
     color: #cec3c3;
+    @include mixin.responsive(xs){
+      font-size: 0.9rem;
+    }
+    @include mixin.responsive(sm){
+      font-size: 0.9rem;
+    }
   }
 
   a {
