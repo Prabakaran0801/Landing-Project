@@ -13,6 +13,9 @@
     padding: 4rem 2rem;
     
   }
+  @include mixin.responsive(lg) {
+    padding: 5rem 3rem;
+  }
 
 
   &--heading {
@@ -56,12 +59,19 @@
       flex-direction: column;
       text-align: center; 
       display: initial;
-      
+      align-items: center;       
+
     }
     @include mixin.responsive(sm){
       flex-direction: column;
-     align-items: center;
      text-align: center;    
+     align-items: center;       
+
+    }
+    @include mixin.responsive(lg){
+      flex-direction: row;
+      text-align: center; 
+      align-items: center;       
     }
   }
 
@@ -70,6 +80,11 @@
     max-width: 300px;
     border-radius: 15px;
     overflow: hidden;
+    @include mixin.responsive(lg){
+      max: width 200px;
+      margin-right: 1.5rem;
+     }
+
      @include mixin.responsive(xs){
     margin-bottom: 1rem;   
     }
@@ -77,8 +92,10 @@
     @include mixin.responsive(sm){
       margin-bottom: 1rem;   
       }
+      
     &--img {
       width: 200px;
+     
     }
     &--content {
       padding: 2rem;
@@ -102,6 +119,9 @@
           @include mixin.responsive(xs){
             font-size: 0.7rem;
             }
+            @include mixin.responsive(lg){
+              font-size: 0.8rem;
+              }
       }
     }
     a {

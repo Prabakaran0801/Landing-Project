@@ -8,6 +8,8 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #eee;
+   
+
 
       @include mixin.responsive(xs){
       
@@ -21,6 +23,12 @@
       
     padding: 2rem 4rem;
 }
+@include mixin.responsive(lg){
+ 
+  padding:1rem 4rem;
+}
+
+
   .nav-toggler{
     display: none;
 
@@ -33,9 +41,12 @@
     font-size:1.4rem;
 }
 @include mixin.responsive(md){
-
   font-size:1.4rem;
 }
+@include mixin.responsive(lg){
+  display: none;
+}
+
 
 }
     &--menu {
@@ -52,13 +63,20 @@
       display: none;
     }
   
+    @include mixin.responsive(lg){
+     display: flex;
+    }
+
       &__item >a{
         transition: 200ms;
         margin-right: 2rem;
         font-size: 18px;
         font-weight: 600;
         color: #000;
-        
+        @include mixin.responsive(lg){
+          font-size:1rem;
+        }
+ 
         &:hover{
   
             color: func.them-colors() ;

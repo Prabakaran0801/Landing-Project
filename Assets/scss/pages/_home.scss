@@ -1,7 +1,7 @@
 @use"../abstact/mixins" as mixin;
 
 .hero-area {
-  padding: 5rem 8rem;
+  padding: 5rem 2rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -19,13 +19,24 @@
     padding: 4rem 2rem;
     flex-direction: column;
   }
- img{
+  @include mixin.responsive(lg){
+    padding: 5rem 2rem;
+    flex-direction: row;
+  }
+ 
+ &--img{
   padding-top:20px ;
-  width: 25rem;
+  width: 30rem;
  }
 
   &--contents {
     max-width: 34rem;
+    
+    @include mixin.responsive(lg){
+      font-size: 1rem;
+      margin-right: 1rem;
+    
+    }
   }
 
   &--title {
@@ -35,7 +46,10 @@
       font-size: 1.5rem;
     }
   }
-  @include mixin.responsive(xs){
+  @include mixin.responsive(md){
+    font-size: 1.3rem;
+  }
+  @include mixin.responsive(lg){
     font-size: 1.3rem;
   }
   &--desc {
@@ -48,5 +62,10 @@
       font-size: 0.8rem;
      
     }
+    @include mixin.responsive(md){
+      font-size: 0.9rem;
+     
+    }
+    
   }
 }

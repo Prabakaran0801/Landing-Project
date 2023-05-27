@@ -27,6 +27,10 @@
      left:10%;
      top: 40%;
     }
+    @include mixin.responsive(lg){
+      left:10%;
+      top: 30%;
+     }
   }
 
   .box2 {
@@ -45,6 +49,10 @@
     @include mixin.responsive(md){
       left:5%;
       top:110%;
+     }
+     @include mixin.responsive(lg){
+      left:25%;
+      top: 90%;
      }
   }
    .box3 {
@@ -74,9 +82,13 @@
     animation: box-shape linear 5s infinite;
     
     @include mixin.responsive(md){
-      left:20%;
+      left:15%;
       top: 110%;
      }  
+     @include mixin.responsive(lg){
+      left:15%;
+      top: 80%;
+     }
   }
 
   .dot2 {
@@ -91,9 +103,13 @@
     transform: rotate(360deg);
     animation: box-shape linear 5s infinite;
     @include mixin.responsive(md){
-      right: 24%;
-       top: 70%;
+      right: 20%;
+       top: 65%;
       }
+      @include mixin.responsive(lg){
+        right: 40%;
+         top: 90%;
+        }
   }
 
   .dot3 {
@@ -108,8 +124,12 @@
     transform: rotate(360deg);
     animation: box-shape linear 5s infinite;
     @include mixin.responsive(md){
-      left:50%;
-      top: 43%;
+      left:80%;
+      top: 30%;
+     } 
+     @include mixin.responsive(lg){
+      left:80%;
+      top: 25%;
      }  
   }
 
@@ -124,6 +144,11 @@
     z-index: -1;
     transform: rotate(360deg);
     animation: box-shape linear 5s infinite;
+
+    @include mixin.responsive(lg){
+      left:40%;
+      top: 35%;
+     } 
   }
 
   .heart1 {
@@ -139,6 +164,11 @@
     @include mixin.responsive(md){
       right:30%;
       top: 30%;
+     }
+     
+    @include mixin.responsive(lg){
+      right:50%;
+      top: 25%;
      }
   }
 
@@ -156,6 +186,11 @@
       left:80%;
       top: 105%;
      }
+
+     @include mixin.responsive(lg){
+      left:5%;
+      top: 80%;
+     }
   }
 
   .circle1 {
@@ -169,8 +204,13 @@
     z-index: -1;
     transform: rotate(360deg);
     animation: box-shape linear 5s infinite;
+
     @include mixin.responsive(md){
       top: 125%;
+     }
+     @include mixin.responsive(lg){
+      top:70%;
+      left: 40%;
      }
   }
 
@@ -190,5 +230,9 @@
      right: 10%;
       top: 48%;
      }
+     @include mixin.responsive(lg){
+      right: 25%;
+       top: 90%;
+      }
   }
 }

@@ -10,6 +10,9 @@
   @include mixin.responsive(sm) {
     padding: 4rem 2rem;
   }
+  @include mixin.responsive(lg) {
+    padding: 5rem 3rem;
+    }
 
   &--heading {
     text-align: center;
@@ -34,6 +37,9 @@
       flex-direction: column;
       margin-left: -3.2rem;
     }
+    @include mixin.responsive(lg) {
+      flex-direction:row;
+    }
   }
 
   &--item {
@@ -43,6 +49,10 @@
     max-width: 350px;
     margin-left: 3.5rem;
     filter: grayscale(100%);
+    @include mixin.responsive(lg) {
+      max-width: 500px;
+      padding: 0;
+    }
 
     &:hover &__img::after {
       animation: rotate-infinite 4000ms linear infinite;
@@ -111,11 +121,20 @@
         top: 90%;
         left: 40%;
       }
+      @include mixin.responsive(lg) {
+        content: "";
+        top: 20%;
+        left: auto;
+        right: -30%;
+       
+
+      }
     }
 
     &:hover:not(:last-child)::before {
       color: func.them-colors();
       right: -25%;
+     
     }
 
     &:hover:last-child::after {
@@ -137,6 +156,16 @@
       @include mixin.responsive(sm) {
         top: 90%;
         left: 30%;
+      }
+
+      @include mixin.responsive(md) {
+        top: 90%;
+        left: 35%;
+      }
+      @include mixin.responsive(lg) {
+        content: "💖👍";
+        top: 20%;
+        left: 75%;
       }
     }
 
