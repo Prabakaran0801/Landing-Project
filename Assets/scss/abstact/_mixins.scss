@@ -60,7 +60,7 @@
     }
   } @else if $breakpoints== xxl {
     //   XX-Large devices (larger desktops, 1400px and up)
-    @media only screen and (min-width: 1400px) {
+    @media only screen and (min-width: 1450px) {
       @content;
     }
   }

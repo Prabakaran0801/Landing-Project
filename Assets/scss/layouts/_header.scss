@@ -1,97 +1,112 @@
- @use"../abstact/variable" as var; 
- @use "../abstact/functions" as func;
- @use"../abstact/mixins" as mixin;
- /* Heder Style */
- .header {
-    padding: 0.5rem 10rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #eee;
-   
+@use "../abstact/variable" as var;
+@use "../abstact/functions" as func;
+@use "../abstact/mixins" as mixin;
+/* Heder Style */
+.header {
+  padding: 0.5rem 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
 
-
-      @include mixin.responsive(xs){
-      
-        padding: 1rem 2rem;
-    }
-    @include mixin.responsive(sm){
-      
-      padding: 1rem 2rem;
+  @include mixin.responsive(xs) {
+    padding: 1rem 2rem;
   }
-  @include mixin.responsive(md){
-      
+  @include mixin.responsive(sm) {
+    padding: 1rem 2rem;
+  }
+  @include mixin.responsive(md) {
     padding: 2rem 4rem;
-}
-@include mixin.responsive(lg){
- 
-  padding:1rem 4rem;
-}
+  }
+  @include mixin.responsive(lg) {
+    padding: 1rem 4rem;
+  }
 
-@include mixin.responsive(xl){
- 
-  padding:1rem 4rem;
-}
+  @include mixin.responsive(xl) {
+    padding: 1rem 4rem;
+    justify-content: space-between;
+  }
 
-  .nav-toggler{
+  @include mixin.responsive(xxl) {
+    padding: 2rem 25rem;
+  }
+
+  &--h2 {
+    @include mixin.responsive(xxl) {
+      font-size: 1.5rem;
+    }
+  }
+  .nav-toggler {
     display: none;
 
-    @include mixin.responsive(xs){
+    @include mixin.responsive(xs) {
       display: block;
-      font-size:1.4rem;
+      font-size: 1.4rem;
+    }
+    @include mixin.responsive(sm) {
+      display: block;
+      font-size: 1.4rem;
+    }
+    @include mixin.responsive(md) {
+      font-size: 1.4rem;
+    }
+    @include mixin.responsive(lg) {
+      display: none;
+    }
+    @include mixin.responsive(xl) {
+      display: none;
+    }
+    @include mixin.responsive(xxl) {
+      display: none;
+    }
   }
-  @include mixin.responsive(sm){
-    display: block;
-    font-size:1.4rem;
-}
-@include mixin.responsive(md){
-  font-size:1.4rem;
-}
-@include mixin.responsive(lg){
-  display: none;
-}
+  &--menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-transform: uppercase;
 
+    @include mixin.responsive(xs) {
+      display: none;
+    }
 
-}
-    &--menu {
+    @include mixin.responsive(sm) {
+      display: none;
+    }
+
+    @include mixin.responsive(lg) {
       display: flex;
-      align-items: center;
-      list-style: none;
-      text-transform: uppercase;
-
-      @include mixin.responsive(xs){
-      display: none;
+    }
+    @include mixin.responsive(xl) {
+      display: flex;
+    }
+    @include mixin.responsive(xxl) {
+      display: flex;
     }
 
-    @include mixin.responsive(sm){
-      display: none;
-    }
-  
-    @include mixin.responsive(lg){
-     display: flex;
-    }
+    &__item > a {
+      transition: 200ms;
+      margin-right: 2rem;
+      font-size: 18px;
+      font-weight: 600;
+      color: #000;
+      @include mixin.responsive(lg) {
+        font-size: 1rem;
+      }
+      @include mixin.responsive(xl) {
+        font-size: 1rem;
+      }
+      @include mixin.responsive(xxl) {
+        font-size: 1.5rem;
+      }
 
-      &__item >a{
-        transition: 200ms;
-        margin-right: 2rem;
-        font-size: 18px;
-        font-weight: 600;
-        color: #000;
-        @include mixin.responsive(lg){
-          font-size:1rem;
-        }
- 
-        &:hover{
-  
-            color: func.them-colors() ;
-          }
+      &:hover {
+        color: func.them-colors();
+      }
 
-          &.active{
-            color: func.them-colors() ;
-          }
-
-    }
-
+      &.active {
+        color: func.them-colors();
+      }
     }
   }
-  
+}

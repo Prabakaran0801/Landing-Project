@@ -1,22 +1,27 @@
-@use"../abstact/mixins" as mixin;
+@use "../abstact/mixins" as mixin;
 
 .background-shapes {
   flex-basis: 100%;
-  @include mixin.responsive(xs){
-    display: none;
-   
-  }
-  @include mixin.responsive(sm){
-    display: none;
-  
-  }
-  @include mixin.responsive(md){
+  @include mixin.responsive(xs) {
     display: none;
   }
-   @include mixin.responsive(lg){
+  @include mixin.responsive(sm) {
+    display: none;
+  }
+  @include mixin.responsive(md) {
+    display: none;
+  }
+  @include mixin.responsive(lg) {
     display: block;
     flex-basis: 0;
-   }
+  }
+  @include mixin.responsive(xl) {
+    display: block;
+  }
+  @include mixin.responsive(xxl) {
+    display: block;
+  }
+
   .box1 {
     position: absolute;
     top: 20%;
@@ -29,14 +34,22 @@
     transform: rotate(360deg);
     animation: box-shape linear 5s infinite;
 
-    @include mixin.responsive(md){
-     left:10%;
-     top: 40%;
+    @include mixin.responsive(md) {
+      left: 10%;
+      top: 40%;
     }
-    @include mixin.responsive(lg){
-      left:10%;
+    @include mixin.responsive(lg) {
+      left: 10%;
       top: 30%;
-     }
+    }
+    @include mixin.responsive(xl) {
+      left: 10%;
+      top: 30%;
+    }
+    @include mixin.responsive(xxl) {
+      left: 15%;
+      top: 20%;
+    }
   }
 
   .box2 {
@@ -52,20 +65,24 @@
     transform: rotate(360deg);
     animation: box-shape linear 5s infinite;
 
-    @include mixin.responsive(md){
-      left:5%;
-      top:110%;
-     }
-     @include mixin.responsive(lg){
-      left:25%;
+    @include mixin.responsive(md) {
+      left: 5%;
+      top: 110%;
+    }
+    @include mixin.responsive(lg) {
+      left: 25%;
       top: 70%;
-     }
-     @include mixin.responsive(xl){
-      left:35%;
+    }
+    @include mixin.responsive(xl) {
+      left: 35%;
       top: 65%;
-     }
+    }
+    @include mixin.responsive(xxl) {
+      left: 35%;
+      top: 40%;
+    }
   }
-   .box3 {
+  .box3 {
     position: absolute;
     top: 85%;
     right: 9%;
@@ -77,14 +94,18 @@
     z-index: -1;
     transform: rotate(360deg);
     animation: box-shape linear 5s infinite;
-    @include mixin.responsive(lg){
-      right:15%;
+    @include mixin.responsive(lg) {
+      right: 15%;
       top: 75%;
-     }
-    @include mixin.responsive(xl){
-      left:65%;
+    }
+    @include mixin.responsive(xl) {
+      left: 65%;
       top: 65%;
-     }
+    }
+    @include mixin.responsive(xxl) {
+      left: 65%;
+      top: 43%;
+    }
   }
 
   .dot1 {
@@ -98,19 +119,23 @@
     z-index: -1;
     transform: rotate(360deg);
     animation: box-shape linear 5s infinite;
-    
-    @include mixin.responsive(md){
-      left:15%;
+
+    @include mixin.responsive(md) {
+      left: 15%;
       top: 110%;
-     }  
-     @include mixin.responsive(lg){
-      left:15%;
+    }
+    @include mixin.responsive(lg) {
+      left: 15%;
       top: 80%;
-     }
-     @include mixin.responsive(xl){
-      left:20%;
+    }
+    @include mixin.responsive(xl) {
+      left: 20%;
       top: 65%;
-     }
+    }
+    @include mixin.responsive(xxl) {
+      left: 20%;
+      top: 40%;
+    }
   }
 
   .dot2 {
@@ -124,18 +149,22 @@
     z-index: -1;
     transform: rotate(360deg);
     animation: box-shape linear 5s infinite;
-    @include mixin.responsive(md){
+    @include mixin.responsive(md) {
       right: 20%;
-       top: 65%;
-      }
-      @include mixin.responsive(lg){
-        right: 40%;
-         top: 85%;
-        }
-        @include mixin.responsive(xl){
-          right: 40%;
-           top: 55%;
-          }
+      top: 65%;
+    }
+    @include mixin.responsive(lg) {
+      right: 40%;
+      top: 85%;
+    }
+    @include mixin.responsive(xl) {
+      right: 40%;
+      top: 55%;
+    }
+    @include mixin.responsive(xl) {
+      right: 50%;
+      top: 30%;
+    }
   }
 
   .dot3 {
@@ -149,14 +178,22 @@
     z-index: -1;
     transform: rotate(360deg);
     animation: box-shape linear 5s infinite;
-    @include mixin.responsive(md){
-      left:80%;
+    @include mixin.responsive(md) {
+      left: 80%;
       top: 30%;
-     } 
-     @include mixin.responsive(lg){
-      left:80%;
+    }
+    @include mixin.responsive(lg) {
+      left: 80%;
       top: 25%;
-     }  
+    }
+    @include mixin.responsive(xl) {
+      right: 20%;
+      top: 20%;
+    }
+    @include mixin.responsive(xxl) {
+      right: 20%;
+      top: 15%;
+    }
   }
 
   .dot4 {
@@ -171,10 +208,18 @@
     transform: rotate(360deg);
     animation: box-shape linear 5s infinite;
 
-    @include mixin.responsive(lg){
-      left:40%;
+    @include mixin.responsive(lg) {
+      left: 40%;
       top: 35%;
-     } 
+    }
+    @include mixin.responsive(xl) {
+      left: 40%;
+      top: 25%;
+    }
+    @include mixin.responsive(xl) {
+      left: 40%;
+      top: 18%;
+    }
   }
 
   .heart1 {
@@ -186,16 +231,24 @@
     z-index: -1;
     transform: rotate(360deg);
     animation: box-shape linear 5s infinite;
-   
-    @include mixin.responsive(md){
-      right:30%;
+
+    @include mixin.responsive(md) {
+      right: 30%;
       top: 30%;
-     }
-     
-    @include mixin.responsive(lg){
-      right:50%;
+    }
+
+    @include mixin.responsive(lg) {
+      right: 50%;
       top: 25%;
-     }
+    }
+    @include mixin.responsive(xl) {
+      right: 50%;
+      top: 25%;
+    }
+    @include mixin.responsive(xl) {
+      right: 45%;
+      top: 18%;
+    }
   }
 
   .heart2 {
@@ -208,19 +261,23 @@
     transform: rotate(360deg);
     animation: box-shape linear 5s infinite;
 
-    @include mixin.responsive(md){
-      left:80%;
+    @include mixin.responsive(md) {
+      left: 80%;
       top: 105%;
-     }
+    }
 
-     @include mixin.responsive(lg){
-      left:5%;
+    @include mixin.responsive(lg) {
+      left: 5%;
       top: 80%;
-     }
-     @include mixin.responsive(xl){
-      left:10%;
+    }
+    @include mixin.responsive(xl) {
+      left: 10%;
       top: 55%;
-     }
+    }
+    @include mixin.responsive(xxl) {
+      left: 17%;
+      top: 35%;
+    }
   }
 
   .circle1 {
@@ -235,17 +292,21 @@
     transform: rotate(360deg);
     animation: box-shape linear 5s infinite;
 
-    @include mixin.responsive(md){
+    @include mixin.responsive(md) {
       top: 125%;
-     }
-     @include mixin.responsive(lg){
-      top:70%;
+    }
+    @include mixin.responsive(lg) {
+      top: 70%;
       left: 40%;
-     }
-     @include mixin.responsive(xl){
-      top:57%;
+    }
+    @include mixin.responsive(xl) {
+      top: 57%;
       left: 47%;
-     }
+    }
+    @include mixin.responsive(xxl) {
+      top: 37%;
+      left: 45%;
+    }
   }
 
   .circle2 {
@@ -259,18 +320,22 @@
     z-index: -1;
     transform: rotate(360deg);
     animation: box-shape linear 5s infinite;
-    
-    @include mixin.responsive(md){
-     right: 10%;
+
+    @include mixin.responsive(md) {
+      right: 10%;
       top: 48%;
-     }
-     @include mixin.responsive(lg){
+    }
+    @include mixin.responsive(lg) {
       right: 25%;
-       top: 80%;
-      }
-      @include mixin.responsive(xl){
-        right: 15%;
-         top: 65%;
-        }
+      top: 80%;
+    }
+    @include mixin.responsive(xl) {
+      right: 15%;
+      top: 65%;
+    }
+    @include mixin.responsive(xl) {
+      right: 15%;
+      top: 35%;
+    }
   }
 }

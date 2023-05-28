@@ -28,15 +28,12 @@ $directions: top, right, bottom, left;
 
 // For creating space-x , space-y values
 
-$space-axis-values:1,2,3,4,5;
-$space-axis-key:"x" "right","y" "top";
+$space-axis-values: 1, 2, 3, 4, 5;
+$space-axis-key: "x" "right", "y" "top";
 
 @each $space-axis in $space-axis-values {
-
-  @each $key,$value in $space-axis-key {
-
+  @each $key, $value in $space-axis-key {
     .space-#{$key}-#{$space-axis} > * {
-
       margin-#{$value}: #{$space-axis}rem;
     }
   }

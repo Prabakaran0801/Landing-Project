@@ -1,5 +1,6 @@
 @use "../abstact/variable" as var;
-@use"../abstact/functions" as func;
+@use "../abstact/functions" as func;
+@use "../abstact/mixins" as mixin;
 
 .btn {
   padding: 0.5rem 1rem;
@@ -10,28 +11,36 @@
   border: none;
   outline: none;
   display: inline-block;
-   cursor: pointer;
+  cursor: pointer;
 
-  &-primary{
+  &-primary {
     @extend .btn;
     background-color: func.them-colors();
     color: #fff;
+    @include mixin.responsive(xxl) {
+      font-size: 1.5rem;
+      padding: 10px 30px;
+    }
   }
 
-  &:hover{
+  &:hover {
     background-color: func.them-colors("primary-hover");
   }
 
-  &-primary-outlined{
+  &-primary-outlined {
     @extend .btn;
     background-color: #fff;
     border: 2px solid func.them-colors();
     color: func.them-colors();
 
+    @include mixin.responsive(xxl) {
+      font-size: 1.5rem;
+      padding: 10px 30px;
+    }
 
-    &:hover{
+    &:hover {
       background-color: func.them-colors();
-      color:#fff;
+      color: #fff;
     }
   }
 }

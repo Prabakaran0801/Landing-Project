@@ -1,6 +1,6 @@
 // Abstract
 @import "./abstact/variable";
-@import"./abstact/mixins";
+@import "./abstact/mixins";
 
 // Base
 @import "./base/reset";
@@ -9,12 +9,12 @@
 // Components
 @import "./components/buttons";
 @import "./components/badges";
-@import"./components/forms";
+@import "./components/forms";
 
 // layouts
 @import "./layouts/header";
 @import "./layouts/background_elements";
-@import"./layouts/footer";
+@import "./layouts/footer";
 
 // utilites
 @import "./utilities/animation";
@@ -22,7 +22,7 @@
 
 // Pages
 @import "./pages/home";
-@import"./pages/about";
-@import"./pages/roadmap";
-@import"./pages/project";
-@import"./pages/contact";
+@import "./pages/about";
+@import "./pages/roadmap";
+@import "./pages/project";
+@import "./pages/contact";

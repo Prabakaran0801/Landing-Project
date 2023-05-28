@@ -1,21 +1,20 @@
-
-@use"../abstact/variable" as var;
+@use "../abstact/variable" as var;
 
 .color-anim {
   transition: 550ms;
   animation: color-change 5s infinite;
 }
 
-.line{
-  background:linear-gradient(to right, #e24997, #2d2ed4);
+.line {
+  background: linear-gradient(to right, #e24997, #2d2ed4);
   width: 8rem;
   height: 0.4rem;
   border-radius: 5px;
-  margin: 25px auto ;
- }
+  margin: 25px auto;
+}
 
- .img-responsive{
+.img-responsive {
   border-radius: 15px;
   max-width: 100%;
   height: auto;
- }
+}

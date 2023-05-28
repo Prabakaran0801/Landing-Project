@@ -1,6 +1,6 @@
 @use "../abstact/variable" as var;
 @use "../abstact/functions" as func;
-@use"../abstact/mixins" as mixin;
+@use "../abstact/mixins" as mixin;
 
 .about-area {
   padding: 10rem 8rem;
@@ -9,99 +9,109 @@
   justify-content: center;
   align-items: center;
 
-  @include mixin.responsive(xs){
+  @include mixin.responsive(xs) {
     padding: 4rem 2rem;
     flex-direction: column;
     margin-top: 0;
   }
 
-  @include mixin.responsive(sm){
+  @include mixin.responsive(sm) {
     padding: 3rem 2rem;
     flex-direction: column;
     margin-top: 0;
   }
-  
-  @include mixin.responsive(md){
+
+  @include mixin.responsive(md) {
     padding: 4rem 3rem;
     flex-direction: column;
     margin-top: 0;
   }
 
-  @include mixin.responsive(lg){
+  @include mixin.responsive(lg) {
     padding: 5rem 3rem;
     flex-direction: row;
     margin-top: 0;
     align-items: center;
   }
-  @include mixin.responsive(xl){
+  @include mixin.responsive(xl) {
     padding: 5rem 3rem;
     align-items: center;
+  }
+
+  @include mixin.responsive(xxl) {
+    padding: 8rem 25rem;
+    justify-content: space-between;
   }
 
   &--img {
     padding: 2rem;
     width: 20rem;
-   
-    @include mixin.responsive(sm){
+
+    @include mixin.responsive(sm) {
       width: 24rem;
       padding: 0;
     }
 
-    @include mixin.responsive(lg){
+    @include mixin.responsive(lg) {
       width: 30rem;
       padding: 2rem;
     }
-    
-    @include mixin.responsive(xl){
+
+    @include mixin.responsive(xl) {
       width: 30rem;
       padding: 2rem;
     }
-   
   }
   &--content {
     color: #fff;
-    @include mixin.responsive(xs){
-      margin: 0;  
-      }
-
+    @include mixin.responsive(xs) {
+      margin: 0;
+    }
 
     h2 {
       font-size: 3rem;
 
-      @include mixin.responsive(xs){
+      @include mixin.responsive(xs) {
         font-size: 1.5rem;
         margin-bottom: 1rem;
         text-align: center;
-
       }
 
-      @include mixin.responsive(sm){
+      @include mixin.responsive(sm) {
         font-size: 2rem;
         text-align: center;
         margin-bottom: 1rem;
         align-items: center;
-
       }
-      @include mixin.responsive(lg){
+      @include mixin.responsive(lg) {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      @include mixin.responsive(xl) {
         font-size: 2.5rem;
         margin-bottom: 1rem;
       }
-
     }
     p {
       line-height: 1.7rem;
       color: #cfcfcf;
 
-      @include mixin.responsive(xs){
+      @include mixin.responsive(xs) {
         font-size: 0.8rem;
         text-align: justify;
         line-height: 1.4rem;
-
       }
-      @include mixin.responsive(lg){
+      @include mixin.responsive(lg) {
         font-size: 1rem;
         line-height: 1.4rem;
-
+      }
+      @include mixin.responsive(xl) {
+        font-size: 1.2rem;
+        line-height: 2rem;
+      }
+      @include mixin.responsive(xxl) {
+        font-size: 2rem;
+        line-height: 2.4rem;
       }
     }
     a {

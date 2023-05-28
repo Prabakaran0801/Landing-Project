@@ -1,4 +1,4 @@
-@use"../abstact/mixins" as mixin;
+@use "../abstact/mixins" as mixin;
 
 .hero-area {
   padding: 5rem 2rem;
@@ -7,65 +7,78 @@
   justify-content: space-around;
   align-items: center;
 
-  @include mixin.responsive(xs){
+  @include mixin.responsive(xs) {
     padding: 4rem 2rem;
     flex-direction: column;
     flex-wrap: nowrap;
   }
 
-  @include mixin.responsive(sm){
+  @include mixin.responsive(sm) {
     padding: 4rem 2rem;
     flex-direction: column;
     flex-wrap: nowrap;
   }
-  @include mixin.responsive(md){
+  @include mixin.responsive(md) {
     padding: 4rem 2rem;
     flex-direction: column;
     flex-wrap: nowrap;
   }
-  @include mixin.responsive(lg){
+  @include mixin.responsive(lg) {
     padding: 8rem 5rem;
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-around;
   }
-  @include mixin.responsive(xl){
-     padding: 8rem 5rem;
+  @include mixin.responsive(xl) {
+    padding: 8rem 5rem;
     justify-content: space-between;
-    
   }
- 
- &--img{
-  padding-top:20px ;
-  width: 30rem;
- }
+  @include mixin.responsive(xxl) {
+    padding: 8rem 25rem;
+    justify-content: space-between;
+  }
+
+  &--img {
+    padding-top: 20px;
+    width: 30rem;
+
+    @include mixin.responsive(xxl) {
+      width: 40rem;
+    }
+  }
 
   &--contents {
     max-width: 34rem;
-    
-    @include mixin.responsive(lg){
+
+    @include mixin.responsive(lg) {
       font-size: 1.3rem;
       margin-right: 1.2rem;
-    
-    
+    }
+
+    @include mixin.responsive(xxl) {
+      margin-right: 20rem;
     }
   }
 
   &--title {
     font-size: 2.5rem;
 
-    @include mixin.responsive(xs){
+    @include mixin.responsive(xs) {
       font-size: 1.5rem;
     }
-  }
-  @include mixin.responsive(md){
-    font-size: 1.3rem;
-  }
-  @include mixin.responsive(lg){
-    font-size: 1.3rem;
-  }
-  @include mixin.responsive(xl){
-    font-size: 2rem;
+
+    @include mixin.responsive(md) {
+      font-size: 1.3rem;
+    }
+    @include mixin.responsive(lg) {
+      font-size: 1.3rem;
+    }
+    @include mixin.responsive(xl) {
+      font-size: 2rem;
+    }
+    @include mixin.responsive(xxl) {
+      font-size: 3.5rem;
+    }
   }
   &--desc {
     margin-top: 1.5rem;
@@ -73,18 +86,17 @@
     line-height: 1.5;
     color: gray;
 
-    @include mixin.responsive(xs){
+    @include mixin.responsive(xs) {
       font-size: 0.8rem;
-     
     }
-    @include mixin.responsive(md){
+    @include mixin.responsive(md) {
       font-size: 0.9rem;
-     
     }
-    @include mixin.responsive(xl){
+    @include mixin.responsive(xl) {
       font-size: 1.2rem;
-     
     }
-    
+    @include mixin.responsive(xxl) {
+      font-size: 1.5rem;
+    }
   }
 }

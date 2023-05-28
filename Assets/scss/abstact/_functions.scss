@@ -1,7 +1,4 @@
-
 @use "../abstact/variable" as var;
-
-
 
 @function them-colors($color: "primary") {
   @return map-get(var.$them-colors, $color);

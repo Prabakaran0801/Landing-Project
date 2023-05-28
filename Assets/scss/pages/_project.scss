@@ -1,17 +1,14 @@
 @use "../abstact/functions" as func;
-@use"../abstact/mixins" as mixin;
+@use "../abstact/mixins" as mixin;
 .card {
   padding: 2rem 8rem;
   background-color: func.them-colors();
 
-  
-  @include mixin.responsive(xs){
+  @include mixin.responsive(xs) {
     padding: 4rem 2rem;
-    
   }
-  @include mixin.responsive(sm){
+  @include mixin.responsive(sm) {
     padding: 4rem 2rem;
-    
   }
   @include mixin.responsive(lg) {
     padding: 5rem 3rem;
@@ -19,7 +16,10 @@
   @include mixin.responsive(xl) {
     padding: 5rem 3rem;
   }
-
+  @include mixin.responsive(xxl) {
+    padding: 8rem 25rem;
+    justify-content: space-between;
+  }
 
   &--heading {
     text-align: center;
@@ -27,120 +27,134 @@
     h2 {
       font-size: 2rem;
       color: #fff;
-      
-    @include mixin.responsive(xs){
-     font-size: 1.5rem;
-      
-    }
 
-    @include mixin.responsive(sm){
-      font-size: 1.5rem;
-       
-     }
-     @include mixin.responsive(sm){
-      font-size: 1.7rem;
-       
-     }
+      @include mixin.responsive(xs) {
+        font-size: 1.5rem;
+      }
+
+      @include mixin.responsive(sm) {
+        font-size: 1.5rem;
+      }
+      @include mixin.responsive(sm) {
+        font-size: 1.7rem;
+      }
+      @include mixin.responsive(xxl) {
+        font-size: 3rem;
+      }
     }
 
     p {
       color: #d6d4d4;
-         
-    @include mixin.responsive(xs){
-      font-size: 0.9rem;
-       
-     }
 
-     @include mixin.responsive(sm){
-      font-size: 0.9rem;
-       
-     }
-     
-     @include mixin.responsive(sm){
-      font-size: 1rem;
-       
-     }
+      @include mixin.responsive(xs) {
+        font-size: 0.9rem;
+      }
+
+      @include mixin.responsive(sm) {
+        font-size: 0.9rem;
+      }
+
+      @include mixin.responsive(md) {
+        font-size: 1rem;
+      }
+      @include mixin.responsive(xxl) {
+        font-size: 2rem;
+      }
     }
   }
 
   &--items {
     display: flex;
     justify-content: space-around;
-    
-    @include mixin.responsive(xs){
+
+    @include mixin.responsive(xs) {
       flex-direction: column;
-      text-align: center; 
+      text-align: center;
       display: initial;
-      align-items: center;       
-
+      align-items: center;
     }
-    @include mixin.responsive(sm){
+    @include mixin.responsive(sm) {
       flex-direction: column;
-     text-align: center;    
-     align-items: center;       
-
+      text-align: center;
+      align-items: center;
     }
-    @include mixin.responsive(lg){
+    @include mixin.responsive(lg) {
       flex-direction: row;
-      text-align: center; 
-      align-items: center;       
+      text-align: center;
+      align-items: center;
+    }
+    @include mixin.responsive(xxl) {
+      flex-direction: row;
+      text-align: center;
+      align-items: center;
     }
   }
 
   &--item {
     background-color: #fff;
     max-width: 300px;
+    height: 500px;
     border-radius: 15px;
     overflow: hidden;
-    @include mixin.responsive(lg){
+
+    @include mixin.responsive(xs) {
+      margin-bottom: 1rem;
+    }
+
+    @include mixin.responsive(sm) {
+      margin-bottom: 1rem;
+    }
+    @include mixin.responsive(lg) {
       max: width 200px;
       margin-right: 1.5rem;
-     }
-
-     @include mixin.responsive(xs){
-    margin-bottom: 1rem;   
+    }
+    @include mixin.responsive(xxl) {
+      max-width: 350px;
     }
 
-    @include mixin.responsive(sm){
-      margin-bottom: 1rem;   
-      }
-      
     &--img {
       width: 200px;
-     
+      @include mixin.responsive(xxl) {
+        width: 250px;
+      }
     }
     &--content {
-      padding: 2rem;
+      padding: 3rem;
 
       h4 {
         font-size: 1.5rem;
-        @include mixin.responsive(xs){
+        @include mixin.responsive(xs) {
           font-size: 1.2rem;
-          }
-          @include mixin.responsive(md){
-            font-size: 1.1rem;
-            }
-            @include mixin.responsive(md){
-              font-size: 1.3rem;
-              }
+        }
+        @include mixin.responsive(md) {
+          font-size: 1.1rem;
+        }
+        @include mixin.responsive(lg) {
+          font-size: 1.3rem;
+        }
+        @include mixin.responsive(xxl) {
+          font-size: 2rem;
+        }
       }
       p {
         color: gray;
         line-height: 1.5rem;
-        @include mixin.responsive(xs){
+        @include mixin.responsive(xs) {
           font-size: 0.9rem;
-          }
+        }
 
-          @include mixin.responsive(xs){
-            font-size: 0.7rem;
-            }
-            @include mixin.responsive(lg){
-              font-size: 0.8rem;
-              }
-              @include mixin.responsive(lg){
-                font-size: 0.9rem;
-                }
-
+        @include mixin.responsive(xs) {
+          font-size: 0.7rem;
+        }
+        @include mixin.responsive(lg) {
+          font-size: 0.8rem;
+        }
+        @include mixin.responsive(xl) {
+          font-size: 0.9rem;
+        }
+        @include mixin.responsive(xxl) {
+          font-size: 1.3rem;
+        }
       }
     }
     a {
@@ -156,6 +170,9 @@
     text-align: center;
     margin-top: 2rem;
     color: rgb(202, 196, 196);
+    @include mixin.responsive(xxl) {
+      font-size: 1.7rem;
+    }
 
     a {
       color: white;
