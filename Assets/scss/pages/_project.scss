@@ -16,6 +16,9 @@
   @include mixin.responsive(lg) {
     padding: 5rem 3rem;
   }
+  @include mixin.responsive(xl) {
+    padding: 5rem 3rem;
+  }
 
 
   &--heading {
@@ -34,6 +37,10 @@
       font-size: 1.5rem;
        
      }
+     @include mixin.responsive(sm){
+      font-size: 1.7rem;
+       
+     }
     }
 
     p {
@@ -46,6 +53,11 @@
 
      @include mixin.responsive(sm){
       font-size: 0.9rem;
+       
+     }
+     
+     @include mixin.responsive(sm){
+      font-size: 1rem;
        
      }
     }
@@ -108,6 +120,9 @@
           @include mixin.responsive(md){
             font-size: 1.1rem;
             }
+            @include mixin.responsive(md){
+              font-size: 1.3rem;
+              }
       }
       p {
         color: gray;
@@ -122,6 +137,10 @@
             @include mixin.responsive(lg){
               font-size: 0.8rem;
               }
+              @include mixin.responsive(lg){
+                font-size: 0.9rem;
+                }
+
       }
     }
     a {

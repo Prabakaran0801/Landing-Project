@@ -1,16 +1,22 @@
 @use"../abstact/mixins" as mixin;
 
 .background-shapes {
-
+  flex-basis: 100%;
   @include mixin.responsive(xs){
     display: none;
+   
   }
   @include mixin.responsive(sm){
     display: none;
+  
   }
   @include mixin.responsive(md){
-    display: block;
+    display: none;
   }
+   @include mixin.responsive(lg){
+    display: block;
+    flex-basis: 0;
+   }
   .box1 {
     position: absolute;
     top: 20%;
@@ -52,7 +58,11 @@
      }
      @include mixin.responsive(lg){
       left:25%;
-      top: 90%;
+      top: 70%;
+     }
+     @include mixin.responsive(xl){
+      left:35%;
+      top: 65%;
      }
   }
    .box3 {
@@ -67,6 +77,14 @@
     z-index: -1;
     transform: rotate(360deg);
     animation: box-shape linear 5s infinite;
+    @include mixin.responsive(lg){
+      right:15%;
+      top: 75%;
+     }
+    @include mixin.responsive(xl){
+      left:65%;
+      top: 65%;
+     }
   }
 
   .dot1 {
@@ -89,6 +107,10 @@
       left:15%;
       top: 80%;
      }
+     @include mixin.responsive(xl){
+      left:20%;
+      top: 65%;
+     }
   }
 
   .dot2 {
@@ -108,8 +130,12 @@
       }
       @include mixin.responsive(lg){
         right: 40%;
-         top: 90%;
+         top: 85%;
         }
+        @include mixin.responsive(xl){
+          right: 40%;
+           top: 55%;
+          }
   }
 
   .dot3 {
@@ -191,6 +217,10 @@
       left:5%;
       top: 80%;
      }
+     @include mixin.responsive(xl){
+      left:10%;
+      top: 55%;
+     }
   }
 
   .circle1 {
@@ -212,6 +242,10 @@
       top:70%;
       left: 40%;
      }
+     @include mixin.responsive(xl){
+      top:57%;
+      left: 47%;
+     }
   }
 
   .circle2 {
@@ -232,7 +266,11 @@
      }
      @include mixin.responsive(lg){
       right: 25%;
-       top: 90%;
+       top: 80%;
       }
+      @include mixin.responsive(xl){
+        right: 15%;
+         top: 65%;
+        }
   }
 }

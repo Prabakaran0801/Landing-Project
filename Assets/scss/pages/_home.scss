@@ -3,25 +3,36 @@
 .hero-area {
   padding: 5rem 2rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 
   @include mixin.responsive(xs){
     padding: 4rem 2rem;
     flex-direction: column;
+    flex-wrap: nowrap;
   }
 
   @include mixin.responsive(sm){
     padding: 4rem 2rem;
     flex-direction: column;
+    flex-wrap: nowrap;
   }
   @include mixin.responsive(md){
     padding: 4rem 2rem;
     flex-direction: column;
+    flex-wrap: nowrap;
   }
   @include mixin.responsive(lg){
-    padding: 5rem 2rem;
+    padding: 8rem 5rem;
+    flex-wrap: nowrap;
     flex-direction: row;
+    justify-content: space-around;
+  }
+  @include mixin.responsive(xl){
+     padding: 8rem 5rem;
+    justify-content: space-between;
+    
   }
  
  &--img{
@@ -33,8 +44,9 @@
     max-width: 34rem;
     
     @include mixin.responsive(lg){
-      font-size: 1rem;
-      margin-right: 1rem;
+      font-size: 1.3rem;
+      margin-right: 1.2rem;
+    
     
     }
   }
@@ -52,6 +64,9 @@
   @include mixin.responsive(lg){
     font-size: 1.3rem;
   }
+  @include mixin.responsive(xl){
+    font-size: 2rem;
+  }
   &--desc {
     margin-top: 1.5rem;
     font-size: 1rem;
@@ -64,6 +79,10 @@
     }
     @include mixin.responsive(md){
       font-size: 0.9rem;
+     
+    }
+    @include mixin.responsive(xl){
+      font-size: 1.2rem;
      
     }
     

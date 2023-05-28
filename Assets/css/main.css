@@ -119,6 +119,11 @@ a {
     padding: 1rem 4rem;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .header {
+    padding: 1rem 4rem;
+  }
+}
 .header .nav-toggler {
   display: none;
 }
@@ -184,6 +189,9 @@ a {
   color: #3f43fd;
 }
 
+.background-shapes {
+  flex-basis: 100%;
+}
 @media only screen and (max-width: 576px) {
   .background-shapes {
     display: none;
@@ -196,7 +204,13 @@ a {
 }
 @media only screen and (min-width: 768px) {
   .background-shapes {
+    display: none;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .background-shapes {
     display: block;
+    flex-basis: 0;
   }
 }
 .background-shapes .box1 {
@@ -245,7 +259,13 @@ a {
 @media only screen and (min-width: 992px) {
   .background-shapes .box2 {
     left: 25%;
-    top: 90%;
+    top: 70%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .background-shapes .box2 {
+    left: 35%;
+    top: 65%;
   }
 }
 .background-shapes .box3 {
@@ -260,6 +280,18 @@ a {
   z-index: -1;
   transform: rotate(360deg);
   animation: box-shape linear 5s infinite;
+}
+@media only screen and (min-width: 992px) {
+  .background-shapes .box3 {
+    right: 15%;
+    top: 75%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .background-shapes .box3 {
+    left: 65%;
+    top: 65%;
+  }
 }
 .background-shapes .dot1 {
   position: absolute;
@@ -285,6 +317,12 @@ a {
     top: 80%;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .background-shapes .dot1 {
+    left: 20%;
+    top: 65%;
+  }
+}
 .background-shapes .dot2 {
   position: absolute;
   top: 60%;
@@ -306,7 +344,13 @@ a {
 @media only screen and (min-width: 992px) {
   .background-shapes .dot2 {
     right: 40%;
-    top: 90%;
+    top: 85%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .background-shapes .dot2 {
+    right: 40%;
+    top: 55%;
   }
 }
 .background-shapes .dot3 {
@@ -395,6 +439,12 @@ a {
     top: 80%;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .background-shapes .heart2 {
+    left: 10%;
+    top: 55%;
+  }
+}
 .background-shapes .circle1 {
   position: absolute;
   top: 80%;
@@ -418,6 +468,12 @@ a {
     left: 40%;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .background-shapes .circle1 {
+    top: 57%;
+    left: 47%;
+  }
+}
 .background-shapes .circle2 {
   position: absolute;
   top: 20%;
@@ -439,7 +495,13 @@ a {
 @media only screen and (min-width: 992px) {
   .background-shapes .circle2 {
     right: 25%;
-    top: 90%;
+    top: 80%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .background-shapes .circle2 {
+    right: 15%;
+    top: 65%;
   }
 }
 
@@ -1161,6 +1223,7 @@ footer .copyright {
 .hero-area {
   padding: 5rem 2rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
@@ -1168,24 +1231,35 @@ footer .copyright {
   .hero-area {
     padding: 4rem 2rem;
     flex-direction: column;
+    flex-wrap: nowrap;
   }
 }
 @media only screen and (min-width: 576px) {
   .hero-area {
     padding: 4rem 2rem;
     flex-direction: column;
+    flex-wrap: nowrap;
   }
 }
 @media only screen and (min-width: 768px) {
   .hero-area {
     padding: 4rem 2rem;
     flex-direction: column;
+    flex-wrap: nowrap;
   }
 }
 @media only screen and (min-width: 992px) {
   .hero-area {
-    padding: 5rem 2rem;
+    padding: 8rem 5rem;
+    flex-wrap: nowrap;
     flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .hero-area {
+    padding: 8rem 5rem;
+    justify-content: space-between;
   }
 }
 .hero-area--img {
@@ -1197,8 +1271,8 @@ footer .copyright {
 }
 @media only screen and (min-width: 992px) {
   .hero-area--contents {
-    font-size: 1rem;
-    margin-right: 1rem;
+    font-size: 1.3rem;
+    margin-right: 1.2rem;
   }
 }
 .hero-area--title {
@@ -1219,6 +1293,11 @@ footer .copyright {
     font-size: 1.3rem;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .hero-area {
+    font-size: 2rem;
+  }
+}
 .hero-area--desc {
   margin-top: 1.5rem;
   font-size: 1rem;
@@ -1233,6 +1312,11 @@ footer .copyright {
 @media only screen and (min-width: 768px) {
   .hero-area--desc {
     font-size: 0.9rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .hero-area--desc {
+    font-size: 1.2rem;
   }
 }
 
@@ -1272,6 +1356,12 @@ footer .copyright {
     align-items: center;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .about-area {
+    padding: 5rem 3rem;
+    align-items: center;
+  }
+}
 .about-area--img {
   padding: 2rem;
   width: 20rem;
@@ -1283,6 +1373,12 @@ footer .copyright {
   }
 }
 @media only screen and (min-width: 992px) {
+  .about-area--img {
+    width: 30rem;
+    padding: 2rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
   .about-area--img {
     width: 30rem;
     padding: 2rem;
@@ -1359,6 +1455,11 @@ footer .copyright {
   }
 }
 @media only screen and (min-width: 992px) {
+  .roadmap {
+    padding: 5rem 3rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
   .roadmap {
     padding: 5rem 3rem;
   }
@@ -1462,7 +1563,7 @@ footer .copyright {
   .roadmap--item:not(:last-child)::before {
     content: "\f107";
     top: 90%;
-    left: 35%;
+    left: 40%;
   }
 }
 @media only screen and (min-width: 576px) {
@@ -1478,6 +1579,14 @@ footer .copyright {
     top: 20%;
     left: auto;
     right: -30%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .roadmap--item:not(:last-child)::before {
+    content: "\f054";
+    top: 20%;
+    left: auto;
+    right: -10%;
   }
 }
 .roadmap--item:hover:not(:last-child)::before {
@@ -1547,6 +1656,11 @@ footer .copyright {
     padding: 5rem 3rem;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .card {
+    padding: 5rem 3rem;
+  }
+}
 .card--heading {
   text-align: center;
 }
@@ -1564,6 +1678,11 @@ footer .copyright {
     font-size: 1.5rem;
   }
 }
+@media only screen and (min-width: 576px) {
+  .card--heading h2 {
+    font-size: 1.7rem;
+  }
+}
 .card--heading p {
   color: #d6d4d4;
 }
@@ -1575,6 +1694,11 @@ footer .copyright {
 @media only screen and (min-width: 576px) {
   .card--heading p {
     font-size: 0.9rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .card--heading p {
+    font-size: 1rem;
   }
 }
 .card--items {
@@ -1644,6 +1768,11 @@ footer .copyright {
     font-size: 1.1rem;
   }
 }
+@media only screen and (min-width: 768px) {
+  .card--item--content h4 {
+    font-size: 1.3rem;
+  }
+}
 .card--item--content p {
   color: gray;
   line-height: 1.5rem;
@@ -1661,6 +1790,11 @@ footer .copyright {
 @media only screen and (min-width: 992px) {
   .card--item--content p {
     font-size: 0.8rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .card--item--content p {
+    font-size: 0.9rem;
   }
 }
 .card--item a {
@@ -1700,6 +1834,11 @@ footer .copyright {
     padding: 5rem 3rem;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .contact {
+    padding: 5rem 3rem;
+  }
+}
 .contact--card {
   display: flex;
   justify-content: space-between;
@@ -1722,9 +1861,10 @@ footer .copyright {
     padding: 2rem;
   }
 }
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 768px) {
   .contact--card {
     flex-direction: row;
+    align-items: initial;
   }
 }
 .contact--card--contents {
@@ -1771,9 +1911,21 @@ footer .copyright {
     max-width: 100%;
   }
 }
+@media only screen and (min-width: 768px) {
+  .contact--card--img {
+    margin-top: 40%;
+    width: 30rem;
+  }
+}
 @media only screen and (min-width: 992px) {
   .contact--card--img {
     margin-top: 20%;
     width: 30rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .contact--card--img {
+    margin-top: 10%;
+    width: 40rem;
   }
 }/*# sourceMappingURL=main.css.map */

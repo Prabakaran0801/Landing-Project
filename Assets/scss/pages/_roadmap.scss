@@ -13,6 +13,9 @@
   @include mixin.responsive(lg) {
     padding: 5rem 3rem;
     }
+    @include mixin.responsive(xl) {
+      padding: 5rem 3rem;
+      }
 
   &--heading {
     text-align: center;
@@ -113,7 +116,7 @@
       @include mixin.responsive(xs) {
         content: "\f107";
         top: 90%;
-        left: 35%;
+        left: 40%;
       }
 
       @include mixin.responsive(sm) {
@@ -126,6 +129,14 @@
         top: 20%;
         left: auto;
         right: -30%;
+       
+
+      }
+      @include mixin.responsive(xl) {
+        content: "";
+        top: 20%;
+        left: auto;
+        right: -10%;
        
 
       }

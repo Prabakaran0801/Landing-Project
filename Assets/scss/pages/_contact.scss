@@ -19,6 +19,10 @@
   @include mixin.responsive(lg) {
     padding: 5rem 3rem;
   }
+  
+  @include mixin.responsive(xl) {
+    padding: 5rem 3rem;
+  }
     &--card{
         display: flex;
         justify-content: space-between;
@@ -43,8 +47,9 @@
           padding: 2rem;
         }
 
-        @include mixin.responsive(sm){
+        @include mixin.responsive(md){
           flex-direction: row;
+          align-items: initial;
          
         }
 
@@ -85,11 +90,21 @@
                 max-width: 100%; 
                 
                 }
+                @include mixin.responsive(md){
+                  margin-top: 40%;
+                  width: 30rem;
+                  
+                  }
                 @include mixin.responsive(lg){
                   margin-top: 20%;
                   width: 30rem;
                   
                   }
+                  @include mixin.responsive(xl){
+                    margin-top: 10%;
+                    width: 40rem;
+                    
+                    }
         }
     }
 }
