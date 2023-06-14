@@ -34,16 +34,22 @@
     justify-content: space-between;
   }
   @include mixin.responsive(xxl) {
-    padding: 8rem 25rem;
+    padding: 8rem 15rem;
     justify-content: space-between;
   }
 
   &--img {
     padding-top: 20px;
     width: 30rem;
+    @include mixin.responsive(xs) {
+      width: 20rem;
+            // margin-left: 20rem;
 
+    }
     @include mixin.responsive(xxl) {
       width: 40rem;
+            // margin-left: 20rem;
+
     }
   }
 
@@ -56,7 +62,9 @@
     }
 
     @include mixin.responsive(xxl) {
-      margin-right: 20rem;
+      // margin-right: 20rem;
+      justify-content: space-around;
+
     }
   }
 

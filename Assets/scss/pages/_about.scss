@@ -39,7 +39,7 @@
   }
 
   @include mixin.responsive(xxl) {
-    padding: 8rem 25rem;
+    padding: 8rem 15rem;
     justify-content: space-between;
   }
 
@@ -60,6 +60,10 @@
     @include mixin.responsive(xl) {
       width: 30rem;
       padding: 2rem;
+    }
+    @include mixin.responsive(xxl) {
+      width: 30rem;
+      padding: 3rem;
     }
   }
   &--content {
@@ -110,7 +114,7 @@
         line-height: 2rem;
       }
       @include mixin.responsive(xxl) {
-        font-size: 2rem;
+        font-size: 1.5rem;
         line-height: 2.4rem;
       }
     }

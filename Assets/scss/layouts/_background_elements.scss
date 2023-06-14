@@ -19,8 +19,8 @@
     display: block;
   }
   @include mixin.responsive(xxl) {
-    display: block;
-  }
+    flex-basis: 0%;
+    }
 
   .box1 {
     position: absolute;

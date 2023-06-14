@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -28,6 +29,10 @@ a {
   border-radius: 15px;
   max-width: 100%;
   height: auto;
+}
+
+.hidden {
+  display: none;
 }
 
 .btn, .btn-primary-outlined, .btn-primary {
@@ -139,7 +144,7 @@ a {
 }
 @media only screen and (min-width: 1450px) {
   .header {
-    padding: 2rem 25rem;
+    padding: 2rem 15rem;
   }
 }
 @media only screen and (min-width: 1450px) {
@@ -190,12 +195,37 @@ a {
 }
 @media only screen and (max-width: 576px) {
   .header--menu {
-    display: none;
+    display: block;
+    position: fixed;
+    left: 0;
+    top: -100%;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    background-color: #1119f7;
+    transition: 500ms;
+  }
+  .header--menu.show {
+    display: blocks;
+    top: 60px;
+  }
+  .header--menu li {
+    padding: 1.5rem;
+    text-align: center;
+  }
+  .header--menu li a {
+    color: #eee;
+  }
+  .header--menu .header--menu__item > a.active {
+    color: #000;
   }
 }
 @media only screen and (min-width: 576px) {
   .header--menu {
     display: none;
+  }
+  .header--menu.show {
+    display: block;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -220,6 +250,11 @@ a {
   font-weight: 600;
   color: #000;
 }
+@media only screen and (min-width: 576px) {
+  .header--menu__item > a {
+    padding-top: 10px;
+  }
+}
 @media only screen and (min-width: 992px) {
   .header--menu__item > a {
     font-size: 1rem;
@@ -240,6 +275,13 @@ a {
 }
 .header--menu__item > a.active {
   color: #3f43fd;
+}
+.header.navbar-fixed {
+  position: fixed;
+  width: 100%;
+  height: 10%;
+  background: #ffffff;
+  z-index: 20;
 }
 
 .background-shapes {
@@ -273,7 +315,7 @@ a {
 }
 @media only screen and (min-width: 1450px) {
   .background-shapes {
-    display: block;
+    flex-basis: 0%;
   }
 }
 .background-shapes .box1 {
@@ -1434,13 +1476,18 @@ footer .copyright {
 }
 @media only screen and (min-width: 1450px) {
   .hero-area {
-    padding: 8rem 25rem;
+    padding: 8rem 15rem;
     justify-content: space-between;
   }
 }
 .hero-area--img {
   padding-top: 20px;
   width: 30rem;
+}
+@media only screen and (max-width: 576px) {
+  .hero-area--img {
+    width: 20rem;
+  }
 }
 @media only screen and (min-width: 1450px) {
   .hero-area--img {
@@ -1458,7 +1505,7 @@ footer .copyright {
 }
 @media only screen and (min-width: 1450px) {
   .hero-area--contents {
-    margin-right: 20rem;
+    justify-content: space-around;
   }
 }
 .hero-area--title {
@@ -1560,7 +1607,7 @@ footer .copyright {
 }
 @media only screen and (min-width: 1450px) {
   .about-area {
-    padding: 8rem 25rem;
+    padding: 8rem 15rem;
     justify-content: space-between;
   }
 }
@@ -1584,6 +1631,12 @@ footer .copyright {
   .about-area--img {
     width: 30rem;
     padding: 2rem;
+  }
+}
+@media only screen and (min-width: 1450px) {
+  .about-area--img {
+    width: 30rem;
+    padding: 3rem;
   }
 }
 .about-area--content {
@@ -1649,7 +1702,7 @@ footer .copyright {
 }
 @media only screen and (min-width: 1450px) {
   .about-area--content p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 2.4rem;
   }
 }
@@ -1686,7 +1739,7 @@ footer .copyright {
 }
 @media only screen and (min-width: 1450px) {
   .roadmap {
-    padding: 8rem 25rem;
+    padding: 8rem 15rem;
     justify-content: space-between;
   }
 }
@@ -1941,7 +1994,7 @@ footer .copyright {
 }
 @media only screen and (min-width: 1450px) {
   .card {
-    padding: 8rem 25rem;
+    padding: 8rem 15rem;
     justify-content: space-between;
   }
 }
@@ -1992,7 +2045,7 @@ footer .copyright {
 }
 @media only screen and (min-width: 1450px) {
   .card--heading p {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 }
 .card--items {
@@ -2031,7 +2084,7 @@ footer .copyright {
 .card--item {
   background-color: #fff;
   max-width: 300px;
-  height: 500px;
+  height: 430px;
   border-radius: 15px;
   overflow: hidden;
 }
@@ -2168,7 +2221,7 @@ footer .copyright {
 }
 @media only screen and (min-width: 1450px) {
   .contact {
-    padding: 8rem 25rem;
+    padding: 8rem 15rem;
     justify-content: space-between;
   }
 }

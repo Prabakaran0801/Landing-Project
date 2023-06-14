@@ -17,7 +17,7 @@
     padding: 5rem 3rem;
   }
   @include mixin.responsive(xxl) {
-    padding: 8rem 25rem;
+    padding: 8rem 15rem;
     justify-content: space-between;
   }
 
@@ -58,7 +58,7 @@
         font-size: 1rem;
       }
       @include mixin.responsive(xxl) {
-        font-size: 2rem;
+        font-size: 1.7rem;
       }
     }
   }
@@ -93,7 +93,7 @@
   &--item {
     background-color: #fff;
     max-width: 300px;
-    height: 500px;
+    height: 430px;
     border-radius: 15px;
     overflow: hidden;
 
