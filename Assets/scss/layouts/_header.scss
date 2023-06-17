@@ -68,37 +68,13 @@
 
     @include mixin.responsive(xs) {
       display: block;
-      position: fixed;
-      left: 0;
-      top: -100%;
-      height: 100vh;
-      width: 100vw;
-      z-index: 1;
-      background-color: func.them-colors("menu-bg");
-      transition: 500ms;
-
-      &.show {
-        display: blocks;
-        top: 60px;
-        // opacity: 0.9;
-      }
-
-      & li{
-        padding: 1.5rem;
-        text-align: center;
-        a{
-          color: #eee;
-        }
-        
-      }
-      .header--menu__item > a.active {
-        color: #000;
-      }
-     
+     @include mixin.mobile-menu;
     }
 
-    @include mixin.responsive(sm) {
+    @include mixin.responsive(sm,"sm-md") {
       display: none;
+      @include mixin.mobile-menu;
+
 
       &.show {
         display: block;
